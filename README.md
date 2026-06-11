@@ -1,6 +1,6 @@
 # INSCALE_ML_Engineer_Assessment
 
-This is the machine learning tool i built for the given ML engineer assessment. So this system use Pandas to prepare the data by gluing all the paragraphs together with their tags. the machine learning approach is used in this system is a hybrid approach consisting of a Zero-Short Classifier called BART and the TF-IDF vectorizer. the BART will act as the system's brain to understand the context of the input from the user where it uses NLP to predict which tags apply to the queries even if the user doesn't type the exact word like in the dataset. then, the TF-IDF vectorizer will turn the text into mathematical vectors to quickly scan the documents and find the exact paragraphs that match the user's keywords. finally, the system will combine the BART part to predict the tags for the user queries with the TF-IDF that search the words in the dataset. 
+This is the machine learning tool i built for the given ML engineer assessment. So this system use Pandas to prepare the data by gluing all the paragraphs together with their tags. the machine learning approach is used in this system is a hybrid approach consisting of a Zero-Shot Classifier called BART and the TF-IDF vectorizer. the BART will act as the system's brain to understand the context of the input from the user where it uses NLP to predict which tags apply to the queries even if the user doesn't type the exact word like in the dataset. then, the TF-IDF vectorizer will turn the text into mathematical vectors to quickly scan the documents and find the exact paragraphs that match the user's keywords. finally, the system will combine the BART part to predict the tags for the user queries with the TF-IDF that search the words in the dataset. 
 
 How This System Works:
 1. Loading the Data: The script (cli.py) reads the provided `documents.csv` and `segments.csv` files. It joins the specific text chunks with their parent document information so every paragraph knows what law it belongs to.
@@ -16,8 +16,9 @@ Limitations:
 1. Limitations of number of words: Because the document text search still relies on TF-IDF, it can sometimes miss relevant paragraphs if the user doesn't type any of the exact keywords used in the legal text. Also, the dataset needs to have a lot more laws so there will be more information.
 
 How to run the code:
-1. open terminal/command line
-2. cd to the file directories
-3. run "pip install -r requirements.txt"
-4. run "python train_model.py"
-5. run "python app.py"
+1. create 2 files and name them 'data' and 'models', put the csv files in 'data' folder.
+2. open terminal/command line
+3. cd to the file directories
+4. run "pip install -r requirements.txt"
+5. run "python train_model.py"
+6. run "python app.py"
