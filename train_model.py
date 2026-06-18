@@ -25,7 +25,7 @@ print("Step 2: Training the keyword searcher (TF-IDF)...")
 # Set up the search tool to ignore common filler words
 vectorizer = TfidfVectorizer(stop_words="english", max_features=5000)
 
-# Teach the machine on the vocabulary from our giant text blocks
+# Teach the machine on the vocabulary from the text blocks
 vectorizer.fit(merged_data["search_text"])
 
 print("Step 3: Saving the model and merged data...")
